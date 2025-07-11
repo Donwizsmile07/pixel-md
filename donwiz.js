@@ -993,7 +993,7 @@ if (global.db.users[m.sender].banned) return m.reply(msg.ban)
 if (!text) return m.reply(example("_love songs_"))
 m.reply(`Downloading ${text} please wait...`)
 let ytsSearchl = await yts(text)
-const res = await ytsSearch.all[0]
+const res = await ytsSearchl.all[0]
 
 var anu = await ytdl.ytmp3(`${res.url}`)
 

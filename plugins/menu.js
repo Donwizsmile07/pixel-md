@@ -69,7 +69,7 @@ let pixelmenu = `┏━〔 ${botname} 〕━┓
 • ${global.simbol} ${global.prefix}update
 
 ➤ BOT CONTROL MENU
-• ${global.simbol} ${global.prefix}Autoreact<
+• ${global.simbol} ${global.prefix}Autoreact
 • ${global.simbol} ${global.prefix}Ban
 • ${global.simbol} ${global.prefix}Block
 • ${global.simbol} ${global.prefix}Broadcast 
@@ -106,6 +106,7 @@ let pixelmenu = `┏━〔 ${botname} 〕━┓
 • ${global.simbol} ${global.prefix}fact
 • ${global.simbol} ${global.prefix}joke
 • ${global.simbol} ${global.prefix}quote
+• ${global.simbol} ${global.prefix}thisorthat
 • ${global.simbol} ${global.prefix}wouldyou
 
 ➤ SEARCH MENU

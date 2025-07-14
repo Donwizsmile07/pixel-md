@@ -96,21 +96,23 @@ let pixelmenu = `┏━〔 ${botname} 〕━┓
 • ${global.simbol} ${global.prefix} PixelAi
 • ${global.simbol} ${global.prefix}ChatPgt
 • ${global.simbol} ${global.prefix}Gemini
-• ${global.simbol} ${global.prefix}deepseek
 • ${global.simbol} ${global.prefix}chatbot
 
 
-➤ GAME MENU
+➤ FUN MENU
 • ${global.simbol} ${global.prefix}Truth
 • ${global.simbol} ${global.prefix}dare
+• ${global.simbol} ${global.prefix}never 
+• ${global.simbol} ${global.prefix}fact
+• ${global.simbol} ${global.prefix}joke
+• ${global.simbol} ${global.prefix}quote
+• ${global.simbol} ${global.prefix}wouldyou
 
 ➤ SEARCH MENU
 • ${global.simbol} ${global.prefix}githubsearch
-• ${global.simbol} ${global.prefix}npm
+• ${global.simbol} ${global.prefix}npmsearch 
 • ${global.simbol} ${global.prefix}stickersearch 
-• ${global.simbol} ${global.prefix}tiktoksearch 
-• ${global.simbol} ${global.prefix}xnxxsearch 
-• ${global.simbol} ${global.prefix}xvideosearch 
+• ${global.simbol} ${global.prefix}tiktoksearch  
 
 ➤ CUSTOM MENU
 • ${global.simbol} ${global.prefix}delcmd

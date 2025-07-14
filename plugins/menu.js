@@ -94,11 +94,10 @@ let pixelmenu = `┏━〔 ${botname} 〕━┓
 • ${global.simbol} ${global.prefix}Unblock
 
 ➤ AI MENU
-• ${global.simbol} ${global.prefix} PixelAi
+• ${global.simbol} ${global.prefix}PixelAi
 • ${global.simbol} ${global.prefix}ChatPgt
 • ${global.simbol} ${global.prefix}Gemini
 • ${global.simbol} ${global.prefix}chatbot
-
 
 ➤ FUN MENU
 • ${global.simbol} ${global.prefix}Truth
@@ -137,6 +136,22 @@ let pixelmenu = `┏━〔 ${botname} 〕━┓
 • ${global.simbol} ${global.prefix}autotyping
 • ${global.simbol} ${global.prefix}online
 • ${global.simbol} ${global.prefix}unavailable
+
+➤ DOWNLOADER MENU 
+• ${global.simbol} ${global.prefix}Play
+• ${global.simbol} ${global.prefix}Video
+• ${global.simbol} ${global.prefix}instagram 
+. ${global.simbol} ${global.prefix}Facebook 
+• ${global.simbol} ${global.prefix}Tiktok
+• ${global.simbol} ${global.prefix}tiktokmp3
+• ${global.simbol} ${global.prefix}Mediafire 
+• ${global.simbol} ${global.prefix}github 
+• ${global.simbol} ${global.prefix}Ytmp4
+• ${global.simbol} ${global.prefix}Ytmp3 
+• ${global.simbol} ${global.prefix}img
+• ${global.simbol} ${global.prefix}Yts
+• ${global.simbol} ${global.prefix}Shortlink-dl 
+• ${global.simbol} ${global.prefix}twitter 
 
 ➤ GROUP MENU
 • ${global.simbol} ${global.prefix}Add

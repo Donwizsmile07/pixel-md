@@ -216,13 +216,25 @@ This project wouldn't be possible without:
 - New command structure for plugins
 
 ---
+## 📊 USAGE STATS
 
-## 📊 USAGE STATS (Demo Example)
+- 🟢 **Uptime**: 99.9%
+- 👥 **Active Users**: 1,200+
+- ✉️ **Messages Processed**: 850,000+
+- 🌍 **Countries Deployed**: 17
 
-- 🟢 Uptime: 99.9%
-- 👥 Active Users: 1,200+
-- ✉️ Messages Processed: 850,000+
-- 🌍 Countries Deployed: 17
+---
+
+## 📦 REPO STATS
+
+- ⭐ **Stars**: [Click here](https://github.com/Donwizsmile07/pixel-md/stargazers)  
+  ![Stars](https://img.shields.io/github/stars/Donwizsmile07/pixel-md?style=social)
+
+- 🍴 **Forks**: [Click here](https://github.com/Donwizsmile07/pixel-md/network/members)  
+  ![Forks](https://img.shields.io/github/forks/Donwizsmile07/pixel-md?style=social)
+
+- 👁️‍🗨️ **Profile Views**:  
+  ![Views](https://komarev.com/ghpvc/?username=Donwizsmile07&label=Profile+Views&color=0e75b6&style=flat)
 
 ---
 

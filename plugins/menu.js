@@ -82,7 +82,8 @@ let pixelmenu = `┏━〔 ${botname} 〕━┓
 • ${global.simbol} ${global.prefix}Listblock
 • ${global.simbol} ${global.prefix}listgroup
 • ${global.simbol} ${global.prefix}Logout
-• ${global.simbol} ${global.prefix}mode
+• ${global.simbol} ${global.prefix}private 
+• ${global.simbol} ${global.prefix}public 
 • ${global.simbol} ${global.prefix}Restart
 • ${global.simbol} ${global.prefix}save
 • ${global.simbol} ${global.prefix}Setbio

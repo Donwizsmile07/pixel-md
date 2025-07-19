@@ -55,7 +55,7 @@ let pixelmenu = `┏━〔 ${botname} 〕━┓
 ┃ 〄 Device: ${getDevice(m.quoted ? m.quoted.id : m.key.id)}
 ┗━━━━━━━━━━━━━━━━━┛
 
-@${m.sender.split("@")[0]} — welcome to ${botname} ♥︎
+Hi @${m.sender.split("@")[0]} — welcome to ${botname} ♥︎
 
 ➤ STATUS MENU
 • ${global.simbol} ${global.prefix}Alive
@@ -99,21 +99,26 @@ let pixelmenu = `┏━〔 ${botname} 〕━┓
 • ${global.simbol} ${global.prefix}Gemini
 • ${global.simbol} ${global.prefix}chatbot
 
-➤ FUN MENU
-• ${global.simbol} ${global.prefix}Truth
-• ${global.simbol} ${global.prefix}dare
-• ${global.simbol} ${global.prefix}never 
+➤ FUN MENU 
 • ${global.simbol} ${global.prefix}fact
 • ${global.simbol} ${global.prefix}joke
 • ${global.simbol} ${global.prefix}quote
-• ${global.simbol} ${global.prefix}thisorthat
-• ${global.simbol} ${global.prefix}wouldyou
+• ${global.simbol} ${global.prefix}pickupline
+• ${global.simbol} ${global.prefix}tonguetwister
+
+➤ GAME MENU
+• ${global.simbol} ${global.prefix}ttt
+• ${global.simbol} ${global.prefix}wcg
+• ${global.simbol} ${global.prefix}flag
+• ${global.simbol} ${global.prefix}dare
+• ${global.simbol} ${global.prefix}never 
+• ${global.simbol} ${global.prefix}truth
+• ${global.simbol} ${global.prefix}wouldyo
 
 ➤ SEARCH MENU
-• ${global.simbol} ${global.prefix}githubsearch
-• ${global.simbol} ${global.prefix}npmsearch 
+• ${global.simbol} ${global.prefix}npmsearch
+• ${global.simbol} ${global.prefix}githubsearch 
 • ${global.simbol} ${global.prefix}stickersearch 
-• ${global.simbol} ${global.prefix}tiktoksearch  
 
 ➤ CUSTOM MENU
 • ${global.simbol} ${global.prefix}delcmd
@@ -148,7 +153,7 @@ let pixelmenu = `┏━〔 ${botname} 〕━┓
 • ${global.simbol} ${global.prefix}github 
 • ${global.simbol} ${global.prefix}Ytmp4
 • ${global.simbol} ${global.prefix}Ytmp3 
-• ${global.simbol} ${global.prefix}img
+• ${global.simbol} ${global.prefix}image
 • ${global.simbol} ${global.prefix}Yts
 • ${global.simbol} ${global.prefix}Shortlink-dl 
 • ${global.simbol} ${global.prefix}twitter 

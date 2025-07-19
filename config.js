@@ -28,22 +28,22 @@ global.goodbye = process.env.GOODBYE === 'false'
 global.welcome = process.env.WELCOME === 'false'
 global.timezone = process.env.TIME_ZONE || "Africa/Lagos";
 global.startup = process.env.START_MSG === 'false'
-global.scan = 'https://arch-md-session.onrender.com/'
+global.scan = 'https://pixel-md.onrender.com'
 global.api = ''
 
 
 //======= Don't touch =======\\
 global.msg = {
-    succes: 'Success',
-    owner: 'This feature could be used by owner only',
-	admin: 'This feature could be used by group admin only',
-	BotAdmin: 'This feature could be used when the bot is an admin only',
-    group: 'Features Used Only For Groups!',
-    private: 'Features Used Only For Private Chat!',
-    bot: 'This feature could be used by bot only',
-    wait: 'processing...',
-    linkm: 'Where is the link?',
-    ban: 'You have been banned from using command contact owner to unban '
+    succes: '✅ Success!',
+owner: '⚠️ Only the bot owner can use this command.',
+admin: '⚠️ This command is restricted to group admins.',
+BotAdmin: '⚠️ Bot needs to be an admin to run this command.',
+group: '⚠️ This command works only in group chats.',
+private: '⚠️ This command can only be used in private chats.',
+bot: '⚠️ Only the bot number is allowed to use this command.',
+wait: '⏳ Please wait, processing...',
+linkm: '⚠️ Please include a valid link.',
+ban: '❌ You’re banned from using commands. Contact the owner to remove the ban.'
     }
 //==========================
     

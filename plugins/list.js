@@ -58,440 +58,208 @@ let handler = async (m, { donwiz, donwizdev, reply4 }) => {
 let timestampe = speed()
 let latensi = speed() - timestampe
 let me = m.sender
-let { getDevice } = require('baileys')
+let { getDevice } = require('@whiskeysockets/baileys')
   if (m.isGroup) {
 if (global.db.groups[m.chat].banned) return
 }
 if (global.db.users[m.sender].banned) return m.reply(global.msg.ban)
-let pixelmenu = `Hi  ${m.pushName} 👋 here's my menu list
-
-
-• Mode
-choose your desired mode type 
-mode private (make the bot for private and sudo user only)
-mode public (make it vulnerable for all users)
-mode pc (make the bot work in private chat only)
-mode group (make the bot work in group only)
-mode off (turn settings on return to default mode)
-
-• Areact
-areact cmd (auto send a await reaction to bot and remove it after few seconds)
-areact all (make the bot to react to all messages)
-
-• Setbio
-set your bot bio easily with text
-
-• Restart
-restart the bot process
-
-• Advertise
-make a broadcast to group by replying to the message/image/video/audio
-
-• Delete
-delete a message by replying to your message (if group bot must be admin to delete other messages)
-
-• Join
-join a group via the group invite link
-
-• Left
-leave a group 
-
-• Logout
-logout all link devices (including the bot)
-
-• Unblock
-unblock a Whatsapp user easily
-
-• Block
-block a Whatsapp user
-
-• Setsudo
-give owner access to your bot even when in private mode or public mode
-
-• Delsudo
-remove owner access to your bot
-
-• Getsudo
-get a list of sudo users
-
-• Listblock
-get a list of all your block users
-
-• Listgroup
-get all the group you are in including jid and info
-
-• Ban
-ban user from using the bot if in public mode
-
-• Unban
-unban user to use the bot
-
-• Setppbot
-set profile picture for bot number
-
-• Delppbot
-delete profile picture for bot number
-
-• Save
-save media to your direct message text/image/video/audio
-
-• Status
-post to status hide mention and tag group or chat
-
-• Play
-download song directly from youtube 
-
-• Video
-download video directly from youtube
-
-• Fb 
-download Facebook video via facebook link no watermark
-
-• Tiktok
-download tiktok video via tiktok link no watermark
-
-• Tiktokmp3
-download tiktok audio via TikTok link
-
-• Mediafire
-download mediafire files via mediafire link 
-
-• Gitclone
-download github files or media via github repository
-
-• Ytmp4
-download youtube video via youtube media link 
-
-• Ytmp3
-download youtube audio via YouTube media link
-
-• Img
-download Pinterest image via query set amonut with number
-
-• Yts
-search for youtube link video without going to YouTube directly 
-
-• Xvideodl
-search for xvideo link videos
-
-• Shortlink-dl
-download shortlink video in a url
-
-• Twitter
-download twitter video no water mark
-
-• Setcmd
-set bot command under sticker when you send the sticker the command will be trigged
-
-• Delcmd
-del command set under sticker
-
-• Update
-check if theres any update made on the bot repository 
-
-• Update now
-update your bot to latest version
-
-• Filter
-set auto reply for your bot either in group or direct message when the set message is been sent the bot will auto reply
-
-• Delfilter
-delete auto reply that was set for the bot
-
-• Listfilter
-get a list of the auto reply set
-
-• Truth
-get a random truth game
-
-• Dare 
-get a random dare game
-
-• Autostatus
-make the bot auto view your status
-
-• Online
-the bot will always mark online even if you are offline
-
-• Autotyping
-the bot will change your presence to auto typing and it will show typing for other viewers
-
-• Autorecording
-the bot will change your presence to auto recording and it will show recording for other viewers
-
-• Autoread
-the bot will auto read all new messages received on it on
-
-• Unavailable
-the bot will show offline when you are offline leaving your current presence
-
-• Antidelete
-send all deleted media or text to your direct message including status
-
-• Anticall
-Anticall reject (Automatically reject all calls)
-Anticall block (Reject call and block caller immediately)
-
-• Autolevelup 
-send an auto level up for all user just for fun
-
-• Autostatuslike
-send a random emoji after viewing status
-
-• Ping
-check bot response speed
-
-• Runtime
-check bot runtime process
-
-• Ai
-talk to a gemini ai with text and get a response 
-
-• Test
-check if bots online
-
-• chatbot
-chat with an artificial intelligence with text
-
-• Alive
-check bot alive message 
-setalive (use this to set your preffered alive message #alive for runtime #ping for bot speed #quote to get random quote)
-
-• Hidetag
-hidetag and tag all members to text or media in group without them knowing
-
-• Gcinfo
-get group info 
-
-• Tagall
-tag all group member either using a text or null
-
-• Tagadmin
-mention all admin in a specific group
-
-• invite
-get group link 
-
-• Reset 
-reset group link
-
-• Add
-add a member to group via quoted or number or tag
-
-• Kick 'fling'
-remove a member to group via quoted or tag or number 
-
-• Promote 
-give administrator to user
-
-• Demote
-remove administrator from user 
-
-• Mute 
-lock a group to only admin can send message
-
-• Unmute
-unlock a group to all members can send message
-
-• Antilink
-antilink delete (detect link and delete link only)
-antilink warn (delete link and give a warning from global.warn when warn completed automatically kick lick sender from group)
-antilink kick (delete and kick link sender immediately)
-
-• Antibot
-kick alternative bot in the group
-
-• Closetime
-set a defualt hour to auto lock group using a 24 hrs format
-
-• Opentime
-set a default open hour to auto open group using a 24 hrs format
-
-• Stoptime
-stop auto lock group
-
-• Welcome 
-send a welcome message to new members joining a group
-
-• Goodbye
-send a goodbye message to member leaving a group
-
-• Welcome on
-set a welcome message to use when welcoming new members
-
-• Goodbye on
-set a goodbye messaage when group members are leaving
-
-• Pdm
-send a promote or demote alert when the action trigged in a group
-
-• Request
-get request of member requesting to join a group
-
-• Accept
-approve join request
-
-• Warn
-send a group warning in direct message to warned user with reason (if reason added)
-
-• Delwarn
-delete 1 warn from warn count 
-
-• Resetwarn 
-reset all user warn to default global.warn
-
-• Antitag
-kick user that use the tag or tagall command
-
-• Kickall
-kick all member from group only except from admins
-
-• Ban
-ban bot from working in the group
-
-• Unban
-unban bot to work in the group
-
-• Sticker
-create a sticker via photo or video
-
-• img
-turn sticker to images
-
-• mp3
-turn video to audio
-
-• mp4
-turn animation sticker to video
-
-• vn
-turn audio to voice note
-
-• vvnew
-change image or video to view once 
-
-• Write
-create sticker with text
-
-• Shorturl
-create short url link 
-
-• Ssweb
-make screenshot to web url
-
-• url
-get a url for your media
-
-• Bass
-add bass sound to audio
-
-• Robot
-add robot sound to audio
-
-• Nightcore
-add nightcore sound to audio
-
-• Fat
-add fat sound to audio
-
-• Fast
-add fast sound to audio
-
-• Reverse
-add reverse sound to audio
-
-• Slow
-add slow sound to audio
-
-• Smooth
-add smooth sound to audio
-
-• Squirrel 
-add squirrel sound to audio
-
-• Blown
-add blown to sound audio
-
-• Deep
-add deep to sound audio
-
-• Stickersearch
-search for a random sticker link
-
-• Xnxxsearch
-search +18 video link from xnxx
-
-• Xvideosearch
-search +18 video link from xvideo 
-
-• Npmsearch
-search npm package link
-
-• Githubsearch
-search for a repository link
-
-• Tiktoksearch
-search for a random tiktok video
-
-• Writetext - Lighteffects
-create a photo360 logo
-
-• device
-get a quoted user device
-
-• Owner 
-show bot owner contact
-
-• Say
-get an audio text to speech from ai
-
-• Trackip
-track ip info via ip adress
-
-• Readmore
-create a readmore
-
-• Vv
-turn view once to media and sent in current chat
-
-• Vvdm
-turn view once to media and sent in private chat
-
-• Fancy
-make a font via text
-
-• Charge
-make a fancy animation
-
-• Support
-Get pixel md bot info
-
-• Take
-change sticker packname and author 
-
-• Getpp
-get profile picture of a Whatsapp user 
-
-• Weather 
-get weather condition in given location 
-
-• Translate 
-translate any language to given country code
-
-• Get
-html only
-
-• Repo
-show bot repository info
-
-• Lyrics
-get music lyrics from query
-
-• jid
-get chat whatsapp identity 
-
-
-© PIXEL WA BOT `
+let pixelmenu = `Hi ${m.pushName} 👋 I'm Pixel,here to help! Check out all my features and commands below
+
+alive — check if bot is running
+device — show device info
+jid — get your WhatsApp JID
+owner — show bot owner's contact
+ping — measure bot latency
+repo — show bot's GitHub repo
+runtime — show bot uptime
+test — run a basic test command
+update — check for bot updates
+
+autoreact — toggle auto reaction
+ban — ban a user from using bot
+block — block a user
+broadcast — send message to all groups
+delete — delete a replied message
+delppbot — remove bot profile picture
+delsudo — remove a sudo user
+getsudo — list all sudo users
+join — join a group via invite
+left — bot leaves the group
+listblock — show blocked users
+listgroup — list all joined groups
+logout — logout from WhatsApp
+private — set bot to private mode
+public — set bot to public mode
+restart — restart the bot
+save — save settings
+setbio — set bot bio
+setppbot — set bot profile picture
+setsudo — add a sudo user
+status — show current bot status
+unban — unban a user
+unblock — unblock a user
+
+pixelai — access Pixel AI
+chatpgt — chat with ChatGPT
+gemini — chat with Gemini AI
+chatbot — toggle AI chatbot mode
+
+fact — get a random fact
+joke — get a random joke
+quote — get a motivational quote
+pickupline — get a random smooth pick-up line
+tonguetwister — get a random tongue twister challenge
+
+ttt — play Tic Tac Toe
+wcg — play Who Can Guess
+dare — get a dare challenge
+flag — play Flag Guessing Game
+never — play Never Have I Ever
+truth — ask a truth question
+wouldyou — play Would You Rather
+
+githubsearch — search GitHub repositories
+npmsearch — search NPM packages
+stickersearch — search for WhatsApp stickers
+
+delcmd — delete custom command
+delfilter — delete word filter
+filter — add a word filter
+listfilter — show all filters
+setcmd — set a custom command
+update — update custom commands
+
+anticall — auto block calls
+antidelete — show deleted messages
+autobio — set auto bio update
+autolevelup — enable auto level up
+autoread — auto read messages
+autorecording — show recording status
+autosend — send automated messages
+autostatus — auto post WhatsApp status
+autostatuslike — auto like bot status
+autotyping — show typing status
+online — set bot online
+unavailable — set bot unavailable
+
+play — download audio from YouTube
+video — download video from YouTube
+instagram — download Instagram media
+facebook — download Facebook video
+tiktok — download TikTok video
+tiktokmp3 — download TikTok audio
+mediafire — download from Mediafire
+github — download from GitHub
+ytmp4 — YouTube to MP4
+ytmp3 — YouTube to MP3
+image — download image by keyword
+yts — search YouTube videos
+shortlink-dl — download from shortened links
+twitter — download Twitter video
+
+add — add a member to group
+antibot — block other bots
+antilink — block links in group
+antitag — block @tag usage
+approve — approve user to group
+ban — ban user from group
+closetime — auto close group at time
+delwarn — delete user warnings
+demote — remove admin rights
+gcinfo — get group info
+goodbye — toggle goodbye message
+invite — generate group invite
+kick — remove user from group
+kickall — remove all users
+mute — mute the group
+opentime — auto open group at time
+pdm — ping don’t mention
+promote — make user admin
+request — request something
+reset — reset group settings
+resetwarn — reset all warnings
+setgoodbye — set goodbye message
+setwelcome — set welcome message
+stoptime — stop group timer
+tag — tag random members
+tagadmin — tag all admins
+tagall — tag everyone
+unban — unban group user
+unmute — unmute the group
+warn — warn a user
+welcome — toggle welcome message
+
+bass — apply bass effect to audio
+blown — blown speaker effect
+deep — make voice deeper
+earrape — loud distorted effect
+fast — speed up audio
+fat — make voice fatter
+img — convert sticker to image
+mp3 — convert video to MP3
+mp4 — convert audio to video
+nightcore — apply nightcore effect
+reverse — reverse audio
+robot — robot voice effect
+shorturl — shorten a URL
+slow — slow down audio
+smooth — smooth voice effect
+squirrel — squirrel voice effect
+ssweb — take website screenshot
+sticker — create sticker
+url — convert media to URL
+vn — send as voice note
+vvnew — enhanced video-to-voice
+write — draw text into image
+
+1917 — text style generator
+advanced — advanced text effect
+blackpink — blackpink text effect
+cartoon — cartoon style text
+clouds — clouds text background
+deleting — delete animation text
+flag — flag-style text
+flag3d — 3D flag text
+freecreate — free-style text
+galaxy — galaxy theme text
+galaxywallpaper — galaxy background
+glowing — glowing neon text
+gradient — gradient text effect
+light — glowing light text
+luxurygold — luxury gold text
+multicolored — colorful text
+making — make cool text styles
+neon — neon style text
+papercut — paper cutout style
+pixelglitch — pixel glitch effect
+royal — royal gold text
+sandsummer — sand effect text
+summerbeach — beach theme text
+typography — custom typography
+underwater — underwater effect
+watercolor — watercolor style
+write — draw text into image
+
+blackpinklogo — generate blackpink logo
+logomaker — create custom logo
+
+charge — show battery/charge status
+fancy — style your text
+get — fetch media by URL
+lyrics — find song lyrics
+pp — show profile picture
+readmore — add read more break
+say — bot says your text
+support — get support info
+take — take sticker pack info
+trackip — track IP address
+translate — translate text
+vv — convert view-once to media
+vvdm — view-once to DM media
+weather — show weather info
+
+
+©𝓟𝓲𝔁𝓮𝓵 𝔀𝓪 𝓫𝓸𝓽`  
 if (menutype === 'v1') {
                     donwiz.sendMessage(m.chat, {
                         text: fontx(pixelmenu),

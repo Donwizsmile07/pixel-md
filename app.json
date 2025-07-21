@@ -1,0 +1,17 @@
+{
+  "name": "Pixel-MD",
+  "description": "Pixel is a smart, multilingual system built for seamless interaction.",
+  "repository": "https://github.com/Donwizsmile07/pixel-md",
+  "keywords": ["whatsapp", "baileys", "nodejs", "pixel"],
+  "env": {
+    "PORT": {
+      "description": "Web server port",
+      "required": true
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}

@@ -213,7 +213,34 @@ ${divider}
  
             }
 
-const thumb = fs.readFileSync ('./tmp/pixel.jpg')
+const fs = require('fs');
+const path = require('path');
+
+// Load all images from ./img folder
+const imageFolder = './tmp';
+const imageFiles = fs.readdirSync(imageFolder).filter(file =>
+  /\.(jpe?g|png)$/i.test(file)
+);
+
+// Pick one randomly
+const selectedImage = path.join(imageFolder, imageFiles[Math.floor(Math.random() * imageFiles.length)]);
+const thumb = fs.readFileSync(selectedImage);
+
+// Send message with externalAdReply
+await conn.sendMessage(m.chat, {
+  text: 'Here is your main menu:',
+  contextInfo: {
+    externalAdReply: {
+      title: 'Pixel-md',
+      body: '〄 Donwiz',
+      thumbnail: thumb,
+      mediaType: 1,
+      previewType: 'PHOTO',
+      renderLargerThumbnail: true,
+      sourceUrl: 'https://github.com/Donwizsmile07/pixel-md/'
+    }
+  }
+}, { quoted: m });
 
 const reply4 = async (talk) => {
    donwiz.sendMessage(m.chat, {image: thumb, caption: talk, }, {quoted: m })

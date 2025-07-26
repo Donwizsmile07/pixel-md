@@ -1,17 +1,58 @@
 {
-  "name": "Pixel-MD",
-  "description": "Pixel is a smart, multilingual system built for seamless interaction.",
+  "name": "Pixel MD",
+  "description": "Pixel is a smart multilingual bot built for seamless interaction.",
+  "logo": "https://files.catbox.moe/xyz123.jpg",
   "repository": "https://github.com/Donwizsmile07/pixel-md",
-  "keywords": ["whatsapp", "baileys", "nodejs", "pixel"],
+  "success_url": "/",
+  "keywords": ["Pixel", "WhatsApp Bot", "Baileys", "Node.js"],
+  "stack": "heroku-24",
   "env": {
+    "SESSION_ID": {
+      "description": "Enter the session string you got after pairing with WhatsApp.",
+      "value": "",
+      "required": true
+    },
+    "BOT_NAME": {
+      "description": "Set a custom name for your bot (default: Pixel).",
+      "value": "Pixel",
+      "required": false
+    },
+    "OWNER_NAME": {
+      "description": "Name of the bot owner for display purposes.",
+      "value": "Donwiz",
+      "required": false
+    },
+    "OWNER_NUMBER": {
+      "description": "Owner's WhatsApp number (use international format without +).",
+      "value": "234913101928",
+      "required": true
+    },
+    "PREFIX": {
+      "description": "Choose your preferred command prefix (e.g., !, ., #).",
+      "value": ".",
+      "required": true
+    },
+    "LANGUAGE": {
+      "description": "Bot language (e.g., en, es, fr).",
+      "value": "en",
+      "required": false
+    },
+    "TIMEZONE": {
+      "description": "Set your timezone (e.g., Africa/Lagos).",
+      "value": "Africa/Lagos",
+      "required": false
+    },
     "PORT": {
-      "description": "Web server port",
+      "description": "The port on which the bot will run.",
       "required": true
     }
   },
   "buildpacks": [
     {
       "url": "heroku/nodejs"
+    },
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
     }
   ]
 }

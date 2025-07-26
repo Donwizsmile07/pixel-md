@@ -24,18 +24,13 @@
     },
     "OWNER_NUMBER": {
       "description": "Owner's WhatsApp number (use international format without +).",
-      "value": "234913101928",
+      "value": "2349131021928",
       "required": true
     },
     "PREFIX": {
       "description": "Choose your preferred command prefix (e.g., !, ., #).",
       "value": ".",
       "required": true
-    },
-    "LANGUAGE": {
-      "description": "Bot language (e.g., en, es, fr).",
-      "value": "en",
-      "required": false
     },
     "TIMEZONE": {
       "description": "Set your timezone (e.g., Africa/Lagos).",

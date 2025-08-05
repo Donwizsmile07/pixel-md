@@ -2151,7 +2151,7 @@ case 'update': {
         }
   } else {
     try {
-      const url = `https://api.github.com/repos/Donwizsmile07/pixel-md/commits?sha=main&per_page=5`;
+      const url = `https://api.github.com/repos/Donwizsmile07/pixel-md/commits?sha=master&per_page=5`;
       const response = await fetch(url, {
         headers: { 'User-Agent': 'Pixel-md/1.0' }
       });

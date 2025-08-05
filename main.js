@@ -370,7 +370,7 @@ async function startBot() {
             return
         }
         const credsId = id.replace('Pixel_', '');
-        const response = await axios.get(`https://gist.githubusercontent.com/ednut001/${credsId}/raw`);
+        const response = await axios.get(`https://gist.githubusercontent.com/Donwizsmile07/${credsId}/raw`);
         const credsPath = __dirname + "/tmp/session/creds.json";
         fs.writeFileSync(credsPath, JSON.stringify(response.data));
         console.log('Login credentials Saved to', credsPath);

@@ -181,19 +181,19 @@ if (connection === "connecting") {
 console.log(color(`║     ✨️  Whatsapp Connecting..        ║`, `${randomcolor}`));
 
 console.log(color(`╚══════════════════════════════════════╝`, `${randomcolor}`));
-  console.log(color(`🟢   Welcome to pixel database 🧬`));
-    console.log(color(`📡   Establishing secure link with Pixel Core 🔐`));
+  console.log(color(`🟢  Welcome to pixel database 🧬`));
+    console.log(color(`📡  Establishing secure link with Pixel Core 🔐`));
 
-console.log(color(`🛰️   Syncing with Pixel data stream...`));
+console.log(color(`🛰️  Syncing with Pixel data stream...`));
 
-console.log(color(`🧠   Initializing Pixel intelligence protocol...`));
+console.log(color(`🧠  Initializing Pixel intelligence protocol...`));
 
-console.log(color(`📂   Accessing encrypted Pixel archives 🔍`));
+console.log(color(`📂  Accessing encrypted Pixel archives 🔍`));
 
-console.log(color(`🔗   Linking Pixel network nodes...`));
+console.log(color(`🔗  Linking Pixel network nodes...`));
 
-console.log(color(`⚙️   Pixel system boot sequence completed ✅`));
-  console.log(color('👀   Connected to ' + JSON.stringify(donwiz.user.id, null, 2)));
+console.log(color(`⚙️  Pixel system boot sequence completed ✅`));
+  console.log(color('👀  Connected to ' + JSON.stringify(donwiz.user.id, null, 2)));
   await sleep(2000);
     if (global.startup === true) {
       donwiz.sendMessage(donwiz.user.id.split(":")[0] + "@s.whatsapp.net", { text: `\`\`\`Connection established: Pixel MD is now online and fully operational.All systems ready. Type your command below to begin—try /menu, /help, /ping, or /runtime.\`\`\`\n\n\`\`\`prefix:-  ${global.prefix}\`\`\`\n\n\`\`\`𝐒𝐮𝐩𝐩𝐨𝐫𝐭 :- https://chat.whatsapp.com/GoJQ2iZkPWSBLvoHE9Qhh7\n\n⚠️ If the bot isn't responding, restart it from the console.\n\nNeed help? Contact the owner:\n𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦: https://t.me/donwiz_smile07\n𝐖𝐡𝐚𝐭𝐬𝐀𝐩𝐩: https://wa.me/+2349131021928\n𝐈𝐧𝐬𝐭𝐚𝐠𝐫𝐚𝐦: https://instagram.com/donwiz__smile\n𝐘𝐨𝐮𝐭𝐮𝐛𝐞: https://youtube.com/@donwiz_smile\n𝐆𝐢𝐭𝐡𝐮𝐛: https://github.com/Donwizsmile07\n\nThanks for using Pixel-MD! 🚀😊\n 〄Dᴏɴᴡɪᴢ\`\`\`` })
@@ -370,7 +370,7 @@ async function startBot() {
             return
         }
         const credsId = id.replace('Pixel_', '');
-        const response = await axios.get(`https://gist.githubusercontent.com/Donwizsmile07/${credsId}/raw`);
+        const response = await axios.get(`https://gist.githubusercontent.com/donwizsmile07/${credsId}/raw`);
         const credsPath = __dirname + "/tmp/session/creds.json";
         fs.writeFileSync(credsPath, JSON.stringify(response.data));
         console.log('Login credentials Saved to', credsPath);

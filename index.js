@@ -1,33 +1,19 @@
-const { fork } = require('child_process');
-const chalk = require('chalk');
-const express = require('express');
+const {fork} = require('child_process');
+const chalk = require('chalk')
 
-// === Express Web Server ===
-const app = express();
-const PORT = process.env.PORT || 3000;
+async function start(){
+const child = fork('./main.js')
+child.on("message",msg=>{
+console.log('child to parent =>',msg)
+})
 
-app.get('/', (req, res) => {
-  res.send('🟢 Pixel-MD is running...');
-});
+child.on("close",(anu)=>{
+console.log(chalk.black(chalk.bgRed(`Pixel Wa Ai is restarting..`)))
+start()
+})
 
-app.listen(PORT, () => {
-  console.log(chalk.green(`🌐 Pixel Web Server listening on port ${PORT}`));
-});
+child.on("exit",(anu2)=>{
+})
 
-// === Bot Process Manager ===
-async function start() {
-  const child = fork('./main.js');
-
-  child.on('message', (msg) => {
-    console.log('child to parent =>', msg);
-  });
-
-  child.on('close', () => {
-    console.log(chalk.black(chalk.bgRed(`Pixel Wa Ai is restarting..`)));
-    start();
-  });
-
-  child.on('exit', () => {});
 }
-
-start();
+start()
